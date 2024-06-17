@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="moneycore-esb-mux">
+    <in>VISA_OUT</in>
+    <out>VISA_IN</out>
+    <ready>visaca.ready</ready>
+    <key>41,11</key>
+    <unhandled>visaca-unhandled</unhandled>
+</mux>

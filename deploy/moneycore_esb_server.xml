@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<server class="org.jpos.q2.iso.QServer" logger="Q2" name="moneycore-esb-server">
+    <attr name="port" type="java.lang.Integer">10000</attr>
+    <attr name="maxSessions" type="java.lang.Integer">500</attr>
+
+    <channel class="org.jpos.iso.channel.XMLChannel" logger="Q2"
+             packager="org.jpos.iso.packager.XMLPackager">
+    </channel>
+
+    <request-listener class="org.moneycore.server.service.MyISORequestListener" logger="Q2">
+    </request-listener>
+
+    <in>network-in</in>
+    <out>network-out</out>
+</server>
