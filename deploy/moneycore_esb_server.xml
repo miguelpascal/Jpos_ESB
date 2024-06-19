@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <server class="org.jpos.q2.iso.QServer" logger="Q2" name="moneycore-esb-server">
-    <attr name="port" type="java.lang.Integer">10000</attr>
-    <attr name="maxSessions" type="java.lang.Integer">500</attr>
+    <attr name="port" type="java.lang.Integer">12201</attr>
+    <attr name="minSessions" type="java.lang.Integer">20</attr>
+    <attr name="maxSessions" type="java.lang.Integer">250</attr>
 
-    <channel class="org.jpos.iso.channel.XMLChannel" logger="Q2"
-             packager="org.jpos.iso.packager.XMLPackager">
+    <channel class="org.jpos.iso.channel.XMLChannel"
+             logger="Q2" packager="org.jpos.iso.packager.XMLPackager">
+        <property name="packager-config" value="cfg/packager/visapack.xml"/>
     </channel>
 
     <request-listener class="org.moneycore.server.service.MyISORequestListener" logger="Q2">
+        <property name="space"   value="tspace:default" />
+        <property name="queue"   value="MyVisaTxnQueue" />
+        <property name="destination-mux" value="mux.moneycore-esb-mux" />
+        <property name="timeout" value="100000"/>
     </request-listener>
 
-    <in>network-in</in>
-    <out>network-out</out>
+<!--    <in>VISA_IN</in>-->
+<!--    <out>VISA_OUT</out>-->
 </server>
+

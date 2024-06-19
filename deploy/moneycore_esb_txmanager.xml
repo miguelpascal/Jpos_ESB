@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<txnmgr name="txnmgrvisa" logger="Q2" class="org.jpos.transaction.TransactionManager">
+    <property name="space" value="tspace:default" />
+    <property name="queue" value="MyVisaTxnQueue" />
+<!--    <property name="sessions" value="5" />-->
+
+    <participant class="org.moneycore.server.iso.QueryRemoteHost" logger="Q2" realm="visatxn"/>
+
+</txnmgr>

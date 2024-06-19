@@ -1,4 +1,4 @@
-package org.moneycore.jposcustomremoteserver.controller;
+package org.moneycore.server.controller;
 
 import org.jpos.iso.ISOException;
 import org.jpos.iso.ISOMsg;
@@ -16,20 +16,20 @@ public class ServerController {
 
     @GetMapping("/")
     public String index() {
-        log.debug("vérification de routing");
+        log.debug("Starting Routing API  ");
         return "Greetings from ESB SERVER!";
     }
 
     @GetMapping("echo")
     public String echo() throws NameRegistrar.NotFoundException, ISOException {
         log.info("echo");
-        MUX mux = QMUX.getMUX("moneycore-mux");
+        MUX mux = QMUX.getMUX("moneycore-esb-mux");
         ISOMsg msg = new ISOMsg();
         msg.setMTI("0800");
         msg.set(11, "000001");
         msg.set(70, "301");
         ISOMsg respMsg = mux.request(msg, 2000);
-        log.info("RespMsg: {}", respMsg);
+        log.info("RespMsg: {}", "Message ISO bien envoyé");
         return "echo";
     }
 }

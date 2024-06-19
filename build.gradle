@@ -18,9 +18,14 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // https://mvnrepository.com/artifact/org.jpos/jpos
+    implementation group: 'org.jpos', name: 'jpos', version: '2.1.9'
+
 }
 
 tasks.named('test') {

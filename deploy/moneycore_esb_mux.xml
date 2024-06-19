@@ -1,5 +1,0 @@
-<mux class="org.jpos.q2.iso.QMUX" name="moneycore-esb-mux">
-    <in>network-out</in>
-    <out>network-in</out>t
-    <unhandled>unhandled</unhandled>
-</mux>

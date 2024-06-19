@@ -1,10 +1,10 @@
 <channel-adaptor name='visaca' class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
-    <channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2" packager="org.jpos.iso.packager.GenericPackager">
-<!--        <property name="host" value="localhost" />-->
-<!--        <property name="port" value="13301" />-->
-        <property name="packager-config" value="cfg/packager/iso87ascii-binary-bitmap.xml" />
-        <property name="timeout" value="300000" />
-<!--        <property name="keep-alive" value="true" />-->
+    <channel class="org.jpos.iso.channel.XMLChannel" logger="Q2" packager="org.jpos.iso.packager.XMLPackager">
+        <property name="host" value="localhost" />
+        <property name="port" value="10001" />
+        <property name="packager-config" value="cfg/packager/visapack.xml" />
+        <property name="timeout" value="1000000" />
+        <property name="keep-alive" value="true" />
     </channel>
     <in>VISA_IN</in>
     <out>VISA_OUT</out>

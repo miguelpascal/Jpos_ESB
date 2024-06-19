@@ -1,4 +1,4 @@
-package org.moneycore.server.service;
+package org.moneycore.server;
 
 import org.jpos.q2.Q2;
 import org.moneycore.server.controller.ServerController;
@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackageClasses = ServerController.class)
 public class JposCustomRemoteServerApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
