@@ -27,7 +27,7 @@ These additional references should also help you:
 
 To test our code, you can configured the file esb_chanel (the host name and the port) to where you want to route the transaction.
 
-Our code is supposed to understand Visa transaction, So to test it, you can used your PC as localhost client with the [Putty Application withh telnet connection](https://www.ssh.com/academy/ssh/putty/download)
+Our code is supposed to understand Visa transaction, So to test it, you can used your PC as localhost client with the [Putty Application with telnet connection](https://www.ssh.com/academy/ssh/putty/download)
 * __Port:__ 12201
 * __Host Name:__ localhost
 
