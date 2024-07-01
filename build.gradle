@@ -25,7 +25,6 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.jpos/jpos
     implementation group: 'org.jpos', name: 'jpos', version: '2.1.9'
-
 }
 
 tasks.named('test') {
